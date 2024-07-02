@@ -195,20 +195,6 @@ header {
     position: fixed;
 }
 
-.nav-open .hamburger {
-    transform: rotate(.625turn);
-}
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-    top: 0;
-}
-
-.nav-open .hamburger::after {
-    opacity: 0;
-}
-
-
 .hamburger {
     padding: .5em;
     background: transparent;
@@ -227,7 +213,7 @@ header {
 
 .hamburger__item {
     display: block;
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -238,7 +224,7 @@ header {
 .hamburger__item::before,
 .hamburger__item::after {
     content: '';
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -256,6 +242,26 @@ header {
 }
 
 /* Toggler animation */
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger__item {
+    transform: rotate(90deg);
+}
+
+.nav-open .hamburger__item::before {
+    /* transform: rotate(90deg) translateX(-6px); */
+    transform: rotate(90deg) ;
+    top: 0;
+}
+
+.nav-open .hamburger__item::after {
+    opacity: 0;
+}   
+
+
 
 /* Intro section */
 .intro {
@@ -438,6 +444,7 @@ header {
     overflow: hidden;
 }
 
+
 .portfolio__img {
     transition:
         transform 750ms cubic-bezier(.5, 0, .5, 1),
@@ -496,4 +503,32 @@ header {
 
 .social-list__link {
     padding: .5em;
+}
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    /* margin-left: auto; */
+    margin-right: auto;
+    text-align: left;
+}
+
+.portfolio-item-individual a {
+    color: var(--clr-accent);
+}
+
+.portfolio__item-img {
+    max-width: 100%;
+    margin-bottom: 2em;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
