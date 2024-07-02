@@ -174,7 +174,65 @@ header {
     color: var(--clr-accent);
 }
 
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
 
+.hamburger {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    z-index: 1001;
+}  
+
+.hamburger:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.hamburger__item {
+    display: block;
+    position: relative;
+}
+
+.hamburger__item,
+.hamburger__item::before,
+.hamburger__item::after {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger__item::before,
+.hamburger__item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger__item::before {
+    top: 6px;
+}
+
+.hamburger__item::after {
+    bottom: 6px;
+}
+
+/* Toggler animation */
 
 /* Intro section */
 .intro {
