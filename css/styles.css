@@ -133,11 +133,9 @@ h3 {
 /* header */
 .logo {
     max-width: 100px;
+    background-color: var(--clr-light)
 }
 
-/* Modifiche per il menù a cascata */
-/* header */
-/* header */
 header {
     position: fixed;
     top: 0;
@@ -161,7 +159,7 @@ header {
     flex-shrink: 0;
 }
 
-/* Modifiche per il menù a cascata */
+/* Navigation menu */
 .nav {
     display: none;
     position: absolute;
@@ -344,7 +342,7 @@ header {
 @media screen and (min-width: 800px) {
     .services {
         display: flex;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -383,7 +381,7 @@ header {
         grid-area: subtitle;
         position: relative;
         left: -1em;
-        width: calc(100% + 2em);
+        /* width: calc(100% + 2em); */
         padding-left: 1em;
         padding-right: 1em;
         z-index: 1;

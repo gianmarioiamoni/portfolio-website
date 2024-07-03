@@ -1,12 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const navToggle = document.querySelector('.nav-toggle');
-//     const nav = document.querySelector('.nav');
-
-//     navToggle.addEventListener('click', () => {
-//         document.body.classList.toggle('nav-open');
-//     });
-// });
-
+// Hamburger menu script for navigation
 document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
