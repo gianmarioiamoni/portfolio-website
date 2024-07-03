@@ -1,41 +1,25 @@
-// const navToggle = document.querySelector('.nav-toggle');
-// const navLinks = document.querySelectorAll('.nav__link');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navToggle = document.querySelector('.nav-toggle');
+//     const nav = document.querySelector('.nav');
 
-// // navToggle.addEventListener('click', () => {
-// //     document.body.classList.toggle('nav-open');
-// // });
-
-// // JavaScript per gestire il toggle della barra laterale
-// document.querySelector('.hamburger').addEventListener('click', () => {
-//     document.body.classList.toggle('nav-open');
-// });
-
-// navLinks.forEach(link => {
-//     link.addEventListener('click', () => {
-//         document.body.classList.remove('nav-open');
+//     navToggle.addEventListener('click', () => {
+//         document.body.classList.toggle('nav-open');
 //     });
-// })
-
-// // JavaScript for toggle navigation
-// const navToggle = document.querySelector('.nav-toggle');
-// const nav = document.querySelector('.nav');
-
-// navToggle.addEventListener('click', () => {
-//     document.body.classList.toggle('nav-open');
 // });
 
-// JavaScript per gestire il toggle della barra di navigazione
-const navToggle = document.querySelector('.nav-toggle');
-// const nav = document.querySelector('.nav');
-const navLinks = document.querySelectorAll('.nav__link');
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const header = document.querySelector('header');
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
+    navToggle.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+    });
 
-// Chiude la barra laterale quando si clicca su una voce di navigazione
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target)) {
+            header.classList.remove('nav-open');
+        }
     });
 });
+

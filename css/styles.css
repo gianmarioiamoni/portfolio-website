@@ -135,46 +135,65 @@ h3 {
     max-width: 100px;
 }
 
+/* Modifiche per il menù a cascata */
+/* header */
+/* header */
 header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em;
+    /* background: #111; */
+    background: var(--clr-dark);
+    /* Stesso background del footer */
+    box-shadow: var(--bs);
+    z-index: 1000;
 }
 
+/* Logo */
+.logo {
+    max-width: 100px;
+    flex-shrink: 0;
+}
+
+/* Modifiche per il menù a cascata */
 .nav {
-    position: fixed;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
     background: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 250px; /* 80% of the viewport width */
-    transform: translateX(-100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-    z-index: 100;
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: var(--bs);
+    z-index: 999;
 }
 
 .nav__list {
     list-style: none;
     margin: 0;
-    padding: 2em 1em;
+    padding: 0;
+}
+
+.nav__item {
+    margin: 0;
 }
 
 .nav__link {
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
-    text-decoration: none;
     display: block;
-    padding: 1em 0;
+    padding: 1rem;
+    color: var(--clr-light);
+    text-decoration: none;
+    transition: background 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
-}
-
-.nav-open .nav {
-    transform: translateX(0);
+    background: var(--clr-accent);
 }
 
 .hamburger {
@@ -182,26 +201,18 @@ header {
     background: transparent;
     border: 0;
     cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
+    position: relative;
     z-index: 1000;
 }
 
 /* hamburger icon */
-
 .nav-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
-    cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .hamburger__item {
@@ -234,6 +245,10 @@ header {
     top: 8px;
 }
 
+.nav-open .nav {
+    display: block;
+}
+
 .nav-open .hamburger__item {
     transform: rotate(45deg);
 }
@@ -257,6 +272,7 @@ header {
 .intro__img {
     box-shadow: var(--bs);
 }
+
 
 .section__subtitle--intro {
     display: inline-block;
