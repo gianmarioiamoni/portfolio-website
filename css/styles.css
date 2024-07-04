@@ -461,6 +461,17 @@ header {
     margin: 1rem 0 2rem;
 }
 
+.portfolio-03-details__img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    opacity: 1;
+    transition:
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+    margin: 1rem 0 2rem;
+}
+
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
@@ -583,7 +594,7 @@ header {
 
 .other {
     background-color: #f44336;
-    
+
 }
 
 /* Icons */
