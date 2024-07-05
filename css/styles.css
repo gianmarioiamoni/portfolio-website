@@ -459,6 +459,7 @@ header {
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
     margin: 1rem 0 2rem;
+    border: black 1px solid;
 }
 
 .portfolio-03-details__img {
